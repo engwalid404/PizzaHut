@@ -1,0 +1,33 @@
+section .row .image {
+  padding-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section .row .image img {
+  width: 140px !important;
+}
+section .row .cust {
+  background-color: var(--light-red);
+  color: var(--red-col);
+  font-size: 13px;
+  top: 130px;
+  right: -18px;
+}
+section .row .cust.arabic {
+  right: unset;
+  left: -18px;
+}
+@media (max-width: 992px) {
+  section .row .cust {
+    position: unset !important;
+    padding: 0 !important;
+    background-color: white !important;
+  }
+}

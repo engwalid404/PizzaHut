@@ -1,0 +1,29 @@
+footer {
+  padding: 20px 0 !important;
+  background-color: var(--gray-col);
+  a {
+    color: white !important;
+    &:hover {
+      color: var(--red-col) !important;
+    }
+  }
+  .footer-midd {
+    h3 {
+      color: var(--darker-white);
+      font-size: 15px;
+    }
+    .lang {
+      img {
+        width: 50px;
+      }
+      a {
+        color: var(--green-col) !important;
+      }
+    }
+  }
+}
+
+.copyright {
+  color: white;
+	background-color: var(--darker-gray);
+}

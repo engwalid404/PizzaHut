@@ -1,0 +1,15 @@
+.mobile-app {
+  height: 294px;
+  background-image: url(../../../assets/download-app-main-land.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  .content {
+    > img {
+      width: 60px;
+    }
+    p {
+      width: 320px;
+    }
+    
+  }
+}

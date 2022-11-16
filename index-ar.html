@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzahut</title>
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <!-- --------------- -->
+    <!-- --------------- -->
+    <!-- START Nav -->
+    <nav class="w-100 bg-white sticky-top">
+      <span class="overlay w-100"></span>
+      <!-- ------- START Mobile Menu -------- -->
+      <div class="mobile-menu arabic d-lg-none position-fixed">
+        <div class="sign-in p-4 text-center d-flex flex-column">
+          <div class="header d-flex align-items-center mb-3 gap-3">
+            <img src="assets/pizzahutLogo-ar.png" alt="" />
+            <div class="text ms-3">
+              <h2 class="m-0">سجل دخولك لفتح الحصري</h2>
+              <p class="m-0">العروض والخصومات</p>
+            </div>
+          </div>
+          <a class="w-100 p-2 rounded" href="#">تسجيل الدخول</a>
+        </div>
+        <ul class="body text-capitalize fw-bold m-0 p-0">
+          <li>
+            <i class="fa-solid fa-globe position-relative"></i> Language /
+            اللغة:
+          </li>
+          <li class="show-menu position-relative">
+            <i class="fa-solid fa-book-open-reader"></i> القائمة
+            <i class="arabic fa-solid fa-chevron-down"></i>
+          </li>
+          <ul id="m-mega-menu" class="menu-list m-0 p-0 d-none">
+            <li>
+              <a href="ar/deals.html"
+                ><i class="fa-solid fa-percent"></i> العروض</a
+              >
+            </li>
+            <li>
+              <a href="ar/pizza.html">
+                <i class="fa-solid fa-pizza-slice"></i> بيتزا
+              </a>
+            </li>
+            <li>
+              <a href="ar/salads.html">
+                <i class="fa-solid fa-leaf"></i> سلطة
+              </a>
+            </li>
+            <li>
+              <a href="ar/deserts.html">
+                <i class="fa-solid fa-ice-cream"></i> حلويات
+              </a>
+            </li>
+            <li>
+              <a href="ar/drinks.html">
+                <i class="fa-solid fa-martini-glass-empty"></i> مشروبات
+              </a>
+            </li>
+          </ul>
+          <li class="text-uppercase">
+            <i class="fa-solid fa-circle-question"></i> الأسئلة المتكررة
+          </li>
+          <li><i class="fa-solid fa-list-ul"></i> الشروط والأحكام</li>
+          <li>
+            <a class="fs-5" href="tel:+201150702471">اتصل بنا</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ------- END Mobile Menu -------- -->
+      <div class="top pt-2 pb-2 fw-bold d-flex align-items-center">
+        <i id="mobile-bar" class="d-lg-none p-2 fs-5 menu fa-solid fa-bars"></i>
+        <div class="logo">
+          <img class="img-fluid" src="assets/pizzahutLogo-ar.png" alt="" />
+        </div>
+        <ul class="m-0 d-lg-flex flex-fill p-0 pe-3">
+          <li>
+            <a class="account-show" href="#">
+              <i class="fs-5 fa-solid fa-door-open"></i>
+              <span>تسجل الدخول</span></a
+            >
+          </li>
+          <li>
+            <a class="account-show-2" href="#">
+              <i class="fs-5 fa-solid fa-user"></i>
+              <span>إنشاء حساب</span></a
+            >
+          </li>
+          <li>
+            <a href="ar/find_pizzhut_map.html">
+              <i class="fs-5 fa-solid fa-location-dot"></i>
+              <span>البحث عن بيتزا هت</span></a
+            >
+          </li>
+        </ul>
+        <div id="lang-change" class="p-lg-2 rounded">
+          <a href="index.html"> English </a>
+        </div>
+      </div>
+      <div
+        class="bottom d-flex align-items-center justify-content-between text-uppercase"
+      >
+        <ul class="left fw-bold d-flex align-items-center m-0">
+          <li class="d-flex align-items-center">
+            <a class="d-flex align-items-center p-2" href="ar/deals.html"
+              >العروض</a
+            >
+          </li>
+          <li class="d-flex align-items-center">
+            <a class="d-flex align-items-center p-2" href="ar/pizza.html"
+              >بيتزا</a
+            >
+          </li>
+          <li class="d-flex align-items-center">
+            <a class="d-flex align-items-center p-2" href="ar/starters.html"
+              >المقبلات</a
+            >
+          </li>
+          <li class="d-flex align-items-center">
+            <a class="d-flex align-items-center p-2" href="ar/salads.html"
+              >السلطات</a
+            >
+          </li>
+          <li class="d-flex align-items-center position-relative">
+            <a class="d-flex align-items-center p-2"
+              >المزيد
+              <span
+                class="position-relative more m-2 bg-white p-2 rounded-circle"
+                ><i class="fa-solid fa-angle-down"></i
+              ></span>
+            </a>
+            <ul class="mega arabic position-absolute p-0 fw-light">
+              <li><a href="ar/deserts.html">الحلويات</a></li>
+              <li><a href="ar/drinks.html">المشروبات</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="right d-flex align-items-center gap-5">
+          <li class="order d-flex">
+            <button
+              class="rounded text-uppercase text-white p-5 fs-5 fw-bold pt-1 pb-1"
+            >
+              البدء بالطلب
+            </button>
+          </li>
+          <li class="cart">
+            <i class="fa-solid fa-cart-shopping me-2"></i> العربة
+          </li>
+          <li class="all-paid">
+            <span class="curr text-uppercase">egp</span>
+            <span class="num">00.00</span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="mobile-location d-flex justify-content-between d-lg-none ps-3 pe-3"
+    >
+      <div class="text">
+        <h2 class="fw-bold mb-1">اختر موقعا:</h2>
+        <p class="m-0">الحصول على أسعار دقيقة وقائمة القائمة</p>
+      </div>
+      <div class="btn text-capitalize">
+        <a class="p-1 ps-3 pe-3 rounded-pill" href="#">اختر</a>
+      </div>
+    </div>
+    <!-- END Nav -->
+    <!-- START Log In -->
+    <div class="account flex-column gap-3 bg-white position-fixed rounded mt-2">
+      <i
+        class="position-absolute close-acc bg-white d-flex justify-content-center align-items-center fa-solid fa-xmark"
+      ></i>
+      <img src="assets/pizzahutLogo-ar.png" />
+      <div class="tabs d-flex gap-3 fs-5 fw-bold">
+        <div class="sign-in active">تسجيل الدخول</div>
+        <div class="create-acc">إنشاء حساب</div>
+      </div>
+      <form class="sign-in-form d-flex flex-column gap-4" data-acc="true">
+        <input
+          class="rounded fs-5 pt-2 pb-2 ps-4 pe-4"
+          type="email"
+          placeholder="البريد الإلكتروني"
+        />
+        <input
+          class="rounded fs-5 fs-5 pt-2 pb-2 ps-4 pe-4"
+          type="Password"
+          placeholder="كلمة السر"
+        />
+        <div class="checks d-flex justify-content-between">
+          <p class="position-relative ps-4 pe-4">
+            <i
+              class="d-none check-mark position-absolute fa-solid fa-check"
+            ></i>
+            تذكرني
+          </p>
+          <a href="#">هل نسيت كلمة السر ؟</a>
+        </div>
+        <input
+          class="fw-bold text-white p-2 rounded"
+          type="submit"
+          value="تسجيل الدخول"
+        />
+      </form>
+      <form
+        class="d-none create-acc-form d-flex flex-column gap-4"
+        data-acc="true"
+      >
+        <input
+          class="rounded pt-2 pb-2 ps-4 pe-4"
+          type="text"
+          placeholder="الاسم الأول*"
+        />
+        <input
+          class="rounded pt-2 pb-2 ps-4 pe-4"
+          type="text"
+          placeholder="اسم العالئلة*"
+        />
+        <input
+          class="rounded pt-2 pb-2 ps-4 pe-4"
+          type="number"
+          placeholder="رقم الهاتف*"
+        />
+        <input
+          class="rounded pt-2 pb-2 ps-4 pe-4"
+          type="email"
+          placeholder="البريد الالكتروني*"
+        />
+        <input
+          class="rounded pt-2 pb-2 ps-4 pe-4"
+          type="Password"
+          placeholder="كلمة السر*"
+        />
+        <input
+          class="rounded pt-2 pb-2 ps-4 pe-4"
+          type="Password"
+          placeholder="أعد كلمة السر*"
+        />
+        <div class="checks d-flex d-none justify-content-between">
+          <p class="position-relative ps-4 pe-4">
+            <i class="d-none check-mark position-absolute fa-solid fa-check"></i
+            >تذكرني
+          </p>
+          <a href="#">هل نسيت كلمة السر؟</a>
+        </div>
+        <input
+          class="fw-bold text-white p-2 rounded"
+          type="submit"
+          value="Sign In"
+        />
+      </form>
+      <h5 class="sign-in-form text-black-50 text-center">أو تواصل باستخدام</h5>
+      <div class="sign-in-form alter-acc d-flex justify-content-center gap-4">
+        <div class="facebook-acc gap-2 p-2 rounded">
+          <img src="assets/facebook.png" alt="" /> فيسبوك
+        </div>
+        <div class="google-acc gap-2 p-2 rounded">
+          <img src="assets/google-mark.png" alt="" /> غوغل
+        </div>
+      </div>
+    </div>
+    <!-- END Log In -->
+    <!-- START Slider -->
+    <section class="home-slider" dir="ltr">
+      <div class="container position-relative p-4">
+        <div
+          id="sld-left"
+          class="arrow d-none d-lg-flex justify-content-center align-items-center start-0 top-50 bg-white position-absolute"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="holder w-100 overflow-hidden">
+          <div id="imgs-slider" class="imgs trans d-flex gap-4 gap-lg-3">
+            <img
+              class="img-fluid rounded d-none d-lg-block"
+              style="height: 280px !important"
+              src="assets/slide-show-1.jpg"
+              alt=""
+            />
+            <img
+              class="img-fluid rounded"
+              src="assets/slide-show-2.jfif"
+              alt=""
+            />
+            <img
+              class="img-fluid rounded"
+              src="assets/slide-show-3.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div
+          id="sld-right"
+          class="arrow d-none d-lg-flex justify-content-center align-items-center end-0 top-50 bg-white position-absolute"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </section>
+    <!-- END Slider -->
+    <!-- START Explore Menu [Mobile] -->
+    <div class="explore-menu mt-4">
+      <div
+        class="container d-flex d-lg-none align-items-center justify-content-between"
+      >
+        <h3 class="m-0 fw-bold">استكشف</h3>
+        <a href="#"> عرض الكل <i class="fa-solid fa-chevron-left"></i> </a>
+      </div>
+    </div>
+    <!-- END Explore Menu [Mobile] -->
+    <!-- START Categories Menu [Mobile] -->
+    <div class="cate-mobile d-lg-none mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="cat arabic col-6 mb-2 rounded">
+            <img class="img-fluid w-100" src="assets/mobile-cat-1.png" alt="" />
+          </div>
+          <div class="cat arabic col-6 mb-2 rounded">
+            <img class="img-fluid w-100" src="assets/mobile-cat-2.png" alt="" />
+          </div>
+          <div class="cat arabic col-6 rounded">
+            <img class="img-fluid w-100" src="assets/mobile-cat-3.png" alt="" />
+          </div>
+          <div class="cat arabic col-6 rounded">
+            <img class="img-fluid w-100" src="assets/mobile-cat-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Categories Menu [Mobile] -->
+    <!-- START deals  -->
+    <section class="exclusive-deals mt-4 d-none d-lg-block">
+      <div class="container">
+        <div
+          class="sec-header mb-5 d-flex justify-content-center align-items-center position-relative"
+        >
+          <h2 class="m-0 fs-4 fw-bold p-1 position-relative">عروض حصرية</h2>
+          <span class="view-all position-absolute start-0 fw-bold">
+            <a
+              class="text-uppercase d-flex justify-content-center align-items-center"
+              href="#"
+            >
+              إظهار الكل
+              <i
+                class="d-flex rounded-circle me-1 justify-content-center align-items-center fa-solid fa-chevron-left"
+              ></i>
+            </a>
+          </span>
+        </div>
+        <div class="row pb-5 gap-4">
+          <div class="col-lg-3 col-md-6 bg-white p-0 rounded pb-1">
+            <div class="img-holder">
+              <img class="img-fluid" src="assets/exc-deals-en-1.jfif" alt="" />
+            </div>
+            <div class="text p-3">
+              <h3 class="fw-bold">
+                اشتري بيتزا حجم كبير و احصل علي بيتزا وسط مجانا
+              </h3>
+              <p class="fw-bold text-black-50 mb-4">
+                اشتري بيتزا حجم كبير و احصل علي بيتزا وسط مجانا (طلبات الاست
+              </p>
+              <a class="ps-4 pe-4 rounded fw-bold" href="#">ADD</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 bg-white p-0 rounded pb-1">
+            <div class="img-holder">
+              <img class="img-fluid" src="assets/exc-deals-en-2.jfif" alt="" />
+            </div>
+            <div class="text p-3">
+              <h3 class="fw-bold">ماي بوكس</h3>
+              <p class="fw-bold text-black-50 mb-4">
+                بيتزا مربعة + 2 طلب جانبي ( بافلو او فاير وينجز ، بطاطس ودج
+              </p>
+              <div class="cost-add d-flex justify-content-between">
+                <span class="price fw-bold">EGP 85.00</span>
+                <a class="ps-4 pe-4 rounded fw-bold" href="#">أضف</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 bg-white p-0 rounded pb-1">
+            <div class="img-holder">
+              <img class="img-fluid" src="assets/exc-deals-en-3.jfif" alt="" />
+            </div>
+            <div class="text p-3">
+              <h3 class="fw-bold">هت وفر مع عرض ستافت كرست بيتزا</h3>
+              <p class="fw-bold text-black-50 mb-4">
+                ١ تشيز ستافت كراست بيتزا وسط من اختيارك + ١ بيف اند شيدر ستا
+              </p>
+              <div class="cost-add d-flex justify-content-between">
+                <span class="price fw-bold">EGP 85.00</span>
+                <a class="ps-4 pe-4 rounded fw-bold" href="#">أضف</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END deals  -->
+    <!-- START Popular Products -->
+    <section class="popular-prod mt-4 pb-3 ps-2 pe-2">
+      <div class="container">
+        <div
+          class="sec-header mb-5 d-flex justify-content-center align-items-center position-relative"
+        >
+          <h2 class="m-0 fs-4 fw-bold p-1 position-relative">
+            المنتجات الأكثر طلبا
+            <span class="line position-absolute"></span>
+          </h2>
+          <span class="view-all position-absolute start-0 fw-bold">
+            <a
+              class="text-uppercase d-flex justify-content-center align-items-center"
+              href="#"
+            >
+              إظهار الكل
+              <i
+                class="d-flex rounded-circle me-1 justify-content-center align-items-center fa-solid fa-chevron-left"
+              ></i>
+            </a>
+          </span>
+        </div>
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-6 bg-white p-2 rounded d-flex d-lg-block align-items-center"
+          >
+            <div class="img-holder text-center w-100">
+              <img class="img-fluid" src="assets/popular-prod-1.png" alt="" />
+            </div>
+            <div class="text p-3 position-relative">
+              <h3 class="fw-bold">كلاسيك بيبرونى</h3>
+              <p class="fw-bold text-black-50 mb-3">
+                البيتزا المشهورة فى كل الاوقات، وجبة اللحوم الشهية مع كمية م
+                <a href="#" class="show-more">...المزيد</a>
+              </p>
+              <span
+                class="cust arabic mb-3 fw-bold p-1 rounded text-capitalize"
+              >
+                تخصيص <i class="ms-1 fa-solid fa-chevron-left"></i>
+              </span>
+              <div
+                class="selects d-flex justify-content-between gap-2 mt-3 mt-lg-0 mb-3"
+              >
+                <div
+                  id="size"
+                  class="rounded in-range-sel position-relative fw-bold"
+                >
+                  <div
+                    class="main in-range-sel p-1 ps-3 pe-3 d-flex gap-3 align-items-center rounded"
+                  >
+                    <span class="selected in-range-sel">صغيرة</span>
+                    <i class="fa-solid in-range-sel fa-chevron-down"></i>
+                  </div>
+                  <div class="opts in-range-sel p-2">
+                    <div class="small in-range-sel active op">صغيرة</div>
+                    <div class="medium in-range-sel op">وسط</div>
+                    <div class="large in-range-sel op">كبيرة</div>
+                  </div>
+                </div>
+                <div
+                  id="feat"
+                  class="rounded in-range-sel position-relative fw-bold"
+                >
+                  <div
+                    class="main in-range-sel p-1 ps-3 pe-3 d-flex justify-content-between gap-3 align-items-center rounded"
+                  >
+                    <span class="selected in-range-sel">بان</span>
+                    <i class="in-range-sel fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div class="opts in-range-sel p-2">
+                    <div class="pan in-range-sel active op">بان</div>
+                    <div class="thin in-range-sel op">ثن</div>
+                    <div class="stuff-crust in-range-sel op">سفيد كرست</div>
+                    <div class="chess-bit in-range-sel op">تشيزي بايتس</div>
+                    <div class="chess-bit-tri in-range-sel op">
+                      تشيزي بايتس تريو
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cost-add d-flex justify-content-between">
+                <span class="price fw-bold">EGP 90.99</span>
+                <a class="ps-4 pe-4 rounded fw-bold" href="#">أضف</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 bg-white p-2 rounded d-flex d-lg-block align-items-center"
+          >
+            <div class="img-holder text-center w-100">
+              <img class="img-fluid" src="assets/popular-prod-2.png" alt="" />
+            </div>
+            <div class="text p-3 position-relative">
+              <h3 class="fw-bold">كلاسيك بيبرونى</h3>
+              <p class="fw-bold text-black-50 mb-3">
+                البيتزا المشهورة فى كل الاوقات، وجبة اللحوم الشهية مع كمية م
+                <a href="#" class="show-more">...المزيد</a>
+              </p>
+              <span
+                class="cust arabic mb-3 fw-bold p-1 rounded text-capitalize"
+              >
+                تخصيص <i class="ms-1 fa-solid fa-chevron-left"></i>
+              </span>
+              <div
+                class="selects d-flex justify-content-between gap-2 mt-3 mt-lg-0 mb-3"
+              >
+                <div
+                  id="size"
+                  class="rounded in-range-sel position-relative fw-bold"
+                >
+                  <div
+                    class="main in-range-sel p-1 ps-3 pe-3 d-flex gap-3 align-items-center rounded"
+                  >
+                    <span class="selected in-range-sel">صغيرة</span>
+                    <i class="fa-solid in-range-sel fa-chevron-down"></i>
+                  </div>
+                  <div class="opts in-range-sel p-2">
+                    <div class="small in-range-sel active op">صغيرة</div>
+                    <div class="medium in-range-sel op">وسط</div>
+                    <div class="large in-range-sel op">كبيرة</div>
+                  </div>
+                </div>
+                <div
+                  id="feat"
+                  class="rounded in-range-sel position-relative fw-bold"
+                >
+                  <div
+                    class="main in-range-sel p-1 ps-3 pe-3 d-flex justify-content-between gap-3 align-items-center rounded"
+                  >
+                    <span class="selected in-range-sel">بان</span>
+                    <i class="in-range-sel fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div class="opts in-range-sel p-2">
+                    <div class="pan in-range-sel active op">بان</div>
+                    <div class="thin in-range-sel op">ثن</div>
+                    <div class="stuff-crust in-range-sel op">سفيد كرست</div>
+                    <div class="chess-bit in-range-sel op">تشيزي بايتس</div>
+                    <div class="chess-bit-tri in-range-sel op">
+                      تشيزي بايتس تريو
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cost-add d-flex justify-content-between">
+                <span class="price fw-bold">EGP 90.99</span>
+                <a class="ps-4 pe-4 rounded fw-bold" href="#">أضف</a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 bg-white p-2 rounded d-flex d-lg-block align-items-center"
+          >
+            <div class="img-holder text-center w-100">
+              <img class="img-fluid" src="assets/popular-prod-3.png" alt="" />
+            </div>
+            <div class="text p-3 position-relative">
+              <h3 class="fw-bold">كلاسيك بيبرونى</h3>
+              <p class="fw-bold text-black-50 mb-3">
+                البيتزا المشهورة فى كل الاوقات، وجبة اللحوم الشهية مع كمية م
+                <a href="#" class="show-more">...المزيد</a>
+              </p>
+              <span
+                class="cust arabic mb-3 fw-bold p-1 rounded text-capitalize"
+              >
+                تخصيص <i class="ms-1 fa-solid fa-chevron-left"></i>
+              </span>
+              <div
+                class="selects d-flex justify-content-between gap-2 mt-3 mt-lg-0 mb-3"
+              >
+                <div
+                  id="size"
+                  class="rounded in-range-sel position-relative fw-bold"
+                >
+                  <div
+                    class="main in-range-sel p-1 ps-3 pe-3 d-flex gap-3 align-items-center rounded"
+                  >
+                    <span class="selected in-range-sel">صغيرة</span>
+                    <i class="fa-solid in-range-sel fa-chevron-down"></i>
+                  </div>
+                  <div class="opts in-range-sel p-2">
+                    <div class="small in-range-sel active op">صغيرة</div>
+                    <div class="medium in-range-sel op">وسط</div>
+                    <div class="large in-range-sel op">كبيرة</div>
+                  </div>
+                </div>
+                <div
+                  id="feat"
+                  class="rounded in-range-sel position-relative fw-bold"
+                >
+                  <div
+                    class="main in-range-sel p-1 ps-3 pe-3 d-flex justify-content-between gap-3 align-items-center rounded"
+                  >
+                    <span class="selected in-range-sel">بان</span>
+                    <i class="in-range-sel fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div class="opts in-range-sel p-2">
+                    <div class="pan in-range-sel active op">بان</div>
+                    <div class="thin in-range-sel op">ثن</div>
+                    <div class="stuff-crust in-range-sel op">سفيد كرست</div>
+                    <div class="chess-bit in-range-sel op">تشيزي بايتس</div>
+                    <div class="chess-bit-tri in-range-sel op">
+                      تشيزي بايتس تريو
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cost-add d-flex justify-content-between">
+                <span class="price fw-bold">EGP 90.99</span>
+                <a class="ps-4 pe-4 rounded fw-bold" href="#">أضف</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="view-full-menu mt-4 fs-3 fw-bold d-flex d-lg-none justify-content-center align-items-center p-3 ps-4 pe-4"
+        >
+          <a class="text-white" href="#">
+            عرض القائمة كاملة
+            <i class="ms-4 fs-4 fa-solid fa-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- END Popular Products -->
+    <!-- START Mobile App -->
+    <section class="mobile-app bg-white mt-5 d-none d-lg-block" dir="ltr">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="content">
+          <img class="img-fluid" src="assets/pizzahutLogo-ar.png" alt="" />
+          <h2>جرب تطبيق بيتزا هت الجديد</h2>
+          <p>
+            نقدم لك تطبيق "بيتزا هت مصر" بكل جديد لتسهيل الطلب والحصول على عروض
+            حصرية رائعة
+          </p>
+          <div class="links">
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.ph.egypt"
+              ><img class="img-fluid" src="assets/google-play-link.png" alt=""
+            /></a>
+            <a
+              target="_blank"
+              href="https://apps.apple.com/eg/app/pizza-hut-egypt/id1511528286"
+              ><img class="img-fluid" src="assets/app-store-link.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END Mobile App -->
+    <!-- START Footer -->
+    <footer class="d-none d-lg-block">
+      <div class="container pt-4 pb-4 d-flex flex-column gap-2">
+        <div class="links d-flex gap-5 fw-bold">
+          <a href="#">العروض</a>
+          <a href="#">معلومات عنا</a>
+          <a href="#">خدمة العملاء</a>
+          <a href="#">سياسات</a>
+          <a href="#">التغذية</a>
+        </div>
+        <div
+          class="footer-midd mt-3 mb-3 d-flex align-items-center justify-content-between"
+        >
+          <div class="soc d-flex gap-5 align-items-center">
+            <h3 class="m-0 fw-bold">تواصل مع بيتزا هت</h3>
+            <div class="media d-flex gap-3 fs-5">
+              <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="lang d-flex gap-5 align-items-center">
+            <h3 class="m-0 fw-bold">اختر البلد</h3>
+            <div class="flag-img">
+              <img class="img-fluid" src="assets/egypt-flag.png" alt="" />
+            </div>
+            <a class="fw-bold" href="#">تغيير</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright d-none d-lg-block">
+      <div class="container pt-3 pb-3 text-center">
+        <p class="m-0">
+          &copy; 2021 طاعم بيتزا هت. المنتجات المميزة متوفرة في المواقع المشاركة
+          فقط. كل الحقوق محفوظة. تطبق الشروط والأحكام.
+        </p>
+      </div>
+    </div>
+    <!-- END Footer -->
+    <!-- START Language Choose -->
+    <div class="choose-lang position-fixed bg-white rounded flex-column">
+      <span
+        class="close position-absolute bg-white d-flex justify-content-center align-items-center"
+        ><i class="fa-solid fa-xmark"></i
+      ></span>
+      <div class="header">
+        <img class="mb-3" src="assets/pizzahutLogo-en.png" alt="" />
+        <h3>هذا الموقع في دول / مناطق أخرى</h3>
+        <p>اختر بلدا</p>
+      </div>
+      <div class="countries mb-3">
+        <div class="count active">
+          <img src="assets/egypt-flag.png" alt="" />
+          مصر
+        </div>
+        <div class="count">
+          <img src="assets/algeria-flag.png" alt="" />
+          الجزائر
+        </div>
+        <div class="count">
+          <img src="assets/saudia-flag.png" alt="" />
+          السعودية
+        </div>
+        <div class="count">
+          <img src="assets/qatar-flag.png" alt="" />
+          قطر
+        </div>
+        <div class="count">
+          <img src="assets/pakistan-flag.png" alt="" />
+          باكستان
+        </div>
+      </div>
+      <a
+        class="Select text-center mt-3 fw-bold align-self-center p-2 rounded"
+        href="index.html"
+        >اختر</a
+      >
+    </div>
+    <!-- END Language Choose -->
+    <!-- --------------- -->
+    <!-- --------------- -->
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>

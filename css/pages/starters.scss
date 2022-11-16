@@ -1,0 +1,14 @@
+@use "../sass/helpers/mixins" as *;
+section {
+  .box {
+    .image {
+      @include centering-flex;
+			img {
+				width: 130px !important;
+				&:nth-child(1) {
+					height: 130px;
+				}
+			}
+    }
+  }
+}

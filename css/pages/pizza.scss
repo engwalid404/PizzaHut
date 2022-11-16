@@ -1,0 +1,31 @@
+@use "../sass/helpers/mixins" as *;
+
+section {
+  .row {
+    .image {
+      padding-top: 5px;
+      @include centering-flex;
+      img {
+        width: 140px !important;
+      }
+    }
+    .cust {
+      background-color: var(--light-red);
+      color: var(--red-col);
+      font-size: 13px;
+      top: 130px;
+      right: -18px;
+      &.arabic {
+        right: unset;
+        left: -18px;
+      }
+    }
+    @media (max-width: 992px) {
+      .cust {
+        position: unset !important;
+        padding: 0 !important;
+        background-color: white !important;
+      }
+    }
+  }
+}

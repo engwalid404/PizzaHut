@@ -1,0 +1,20 @@
+@use "../helpers/variables" as *;
+
+.exclusive-deals {
+  background-color: var(--light-red);
+  .row {
+    .text {
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+			a {
+				color: white;
+				background-color: var(--green-col);
+				padding: 4px;
+			}
+    }
+  }
+}

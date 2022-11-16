@@ -1,0 +1,88 @@
+/* [Home Slider] [ Explore Menu (mobile) ] [Categories (mobile)] */
+
+@use "../helpers/variables" as *;
+.home-slider {
+  .holder {
+    .imgs {
+      transition: 0.5s ease-out;
+      transform: translateX(-10px);
+      img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+    }
+  }
+  .arrow {
+    z-index: 300;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 12px var(--shadow-col);
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-slider {
+    .arrow {
+      display: none !important;
+    }
+    img {
+      width: 98%;
+    }
+  }
+}
+
+// Explore Menu (mobile)
+.explore-menu {
+  a {
+    color: var(--red-col);
+    &:hover {
+      color: var(--red-col) !important;
+    }
+  }
+}
+
+// Categories (mobile)
+.cate-mobile {
+  .cat {
+    position: relative;
+    &::after {
+      content: "Deals";
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      font-size: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      letter-spacing: 1px;
+    }
+    &.arabic:after {
+      content: "عروض";
+    }
+    &:nth-child(2):after {
+      content: "Pizza";
+    }
+    &.arabic:nth-child(2):after {
+      content: "بيتزا";
+    }
+    &:nth-child(3):after {
+      content: "Starters";
+    }
+    &.arabic:nth-child(3):after {
+      content: "مقبلات";
+    }
+    &:nth-child(4):after {
+      content: "Salads";
+    }
+    &.arabic:nth-child(4):after {
+      content: "سلطات";
+    }
+  }
+}
