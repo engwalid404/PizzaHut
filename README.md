@@ -3,7 +3,7 @@ This is an attempt to make a design of pizzahut website [ Egypt] hope you like i
 ## [Live Demo](https://engwalid404.github.io/PizzaHut/)
 ## [Main Website](https://github.com/engwalid404/PizzaHut)
  
-#Department
+# Department
 .Deals
 .Pizza
 .Starters
@@ -19,7 +19,7 @@ This is an attempt to make a design of pizzahut website [ Egypt] hope you like i
 .javascript
 .jquery
 
-#Advantages
+# Advantages
 .validation
 .performance
 .security
